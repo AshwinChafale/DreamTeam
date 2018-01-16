@@ -1,1 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
+.fullscreenloader{
+    height: 100vh;
+    widows: 100vw;
+    text-align: center;
+    font-size: 200px;
+}
+.spinner{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    border-radius: 25px;
+    animation: colorFade 1s infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    display: inline-block;
+    box-shadow: 0 5px 5px lightblue;
+}
+.spinnerGreen{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    border-radius: 25px;
+    animation: colorFadeGreen 1s infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    display: inline-block;
+    box-shadow: 0 5px 5px lightblue;
+}
+.spinnerOrange{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    border-radius: 25px;
+    animation: colorFadeOrange 1s infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    display: inline-block;
+    box-shadow: 0 5px 5px lightblue;
+}
+@keyframes colorFade{
+    from{
+        background-color: #eee;
+        box-shadow: 0 5px 5px lightblue;
+    }
+    to{
+        background-color: lightskyblue;
+        box-shadow: 0 5px 5px #eee;
+    }
+}
+@keyframes colorFadeGreen{
+    from{
+        background-color: green;
+        box-shadow: 0 5px 5px lightgreen;
+    }
+    to{
+        background-color: lightgreen;
+        box-shadow: 0 5px 5px green;
+    }
+}
+@keyframes colorFadeOrange{
+    from{
+        background-color: orange;
+        box-shadow: 0 5px 5px lightyellow;
+    }
+    to{
+        background-color: lightyellow;
+        box-shadow: 0 5px 5px orange;
+    }
+}

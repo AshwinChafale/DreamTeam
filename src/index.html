@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>PracticeApp</title>
@@ -7,8 +8,21 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-  <app-root></app-root>
+  <!-- Just write anything between app-root tag and it will appear as loading screen -->
+  <app-root>
+    <div class="fullscreenloader">
+      <div class="spinnerOrange"></div>
+      <div class="spinner"></div>
+      <div class="spinnerGreen"></div>
+    </div>
+  </app-root>
 </body>
+
 </html>
