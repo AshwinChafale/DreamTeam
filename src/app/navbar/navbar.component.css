@@ -13,5 +13,21 @@
 }
 
 .nav-link::first-letter{
-    color: white;
+    font-weight: bold;
+    color: #314559;
+}
+.nav-link{
+    font-weight: bold;
+    animation: colorSwap 10s infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes colorSwap{
+    from{
+        color:#314559;
+    }
+    to{
+        color:lightskyblue;
+    }
 }
