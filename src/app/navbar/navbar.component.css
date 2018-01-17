@@ -12,11 +12,27 @@
     }
 }
 
+@media screen and (min-width:994px){
+    .navbar-brand-right {
+        position: absolute;
+        right: 1%;
+        display: block;
+        width: auto;
+        text-align: right;
+    }
+    .navbar>.container .navbar-brand-right, 
+    .navbar>.container-fluid .navbar-brand-right {
+        margin-left: -80px;
+    }
+}
+
 .nav-link::first-letter{
+    font-size: 1rem;
     font-weight: bold;
     color: #314559;
 }
 .nav-link{
+    font-size: 1rem;
     font-weight: bold;
     animation: colorSwap 10s infinite;
     animation-direction: alternate;
@@ -30,4 +46,13 @@
     to{
         color:lightskyblue;
     }
+}
+
+.nav-item{
+    padding-left: 25px !important;
+}
+
+.btn-outline-primary{
+    font-weight: bold;
+    font-size: 1rem;
 }

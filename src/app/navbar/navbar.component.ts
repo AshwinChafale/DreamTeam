@@ -16,6 +16,14 @@ export class NavbarComponent implements OnInit {
     "name": "Player",
     "link": "/player"
   }];
+  // buttonitems: any[] = [{
+  //   "name": "LOG IN",
+  //   "link": "/login"
+  // }, {
+  //   "name": "JOIN",
+  //   "link": "/join"
+  // }];
+  logourl:any = "/assets/images/logo.svg";
   constructor() { }
 
   ngOnInit() {

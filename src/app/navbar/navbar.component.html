@@ -1,14 +1,40 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"><img src="/assets/images/logo.svg" class="d-inline-block align-top" alt=""></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <a class="navbar-brand" href="#">
+    <img [src]='logourl' class="d-inline-block align-top" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse navbar-brand-centered" id="navbarSupportedContent">
-    <ul *ngFor = 'let menuitem of menuitems' class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" [href]='menuitem.link'>{{menuitem.name}}</a>
-      </li>
-    </ul>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="navbar-brand-centered">
+      <ul class="navbar-nav mr-auto">
+        <li *ngFor='let menuitem of menuitems' class="nav-item">
+          <a class="nav-link" [href]='menuitem.link'>{{menuitem.name}}</a>
+        </li>
+      </ul>
+    </div>
+    <!-- <div class="navbar-brand-right">
+          <ul class="navbar-nav justify-content-end">
+            <li *ngFor='let buttonitem of buttonitems' class="nav-item">
+              <a class="nav-link" [href]='buttonitem.link'><button type="button" class="btn btn-outline-primary" style="border-radius:30px;">{{buttonitem.name}}</button></a>
+            </li>
+          </ul>
+      </div> -->
+    <div class="navbar-brand-right">
+      <ul class="navbar-nav justify-content-end">
+        <li class="nav-item" style="padding-left:0 !important;">
+          <a class="nav-link" href="">
+            <button type="button" class="btn btn-outline-primary" style="border-radius:30px;padding:.375rem 1.75rem; border-color:#00000000;">LOG IN</button>
+          </a>
+        </li>
+        <li class="nav-item" style="padding-left:0 !important;">
+          <a class="nav-link" href="">
+            <button type="button" class="btn btn-outline-primary" style="border-radius:30px;padding:.375rem 2.75rem;">JOIN</button>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
