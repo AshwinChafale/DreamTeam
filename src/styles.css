@@ -1,13 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 .fullscreenloader{
     height: 100vh;
-    widows: 100vw;
     text-align: center;
-    font-size: 200px;
+    font-size: 50px;
+    padding-top: 40vh;
 }
 .spinner{
-    height: 50px;
-    width: 50px;
+    height: 20px;
+    width: 20px;
     background-color: red;
     border-radius: 25px;
     animation: colorFade 1s infinite;
@@ -17,8 +17,8 @@
     box-shadow: 0 5px 5px lightblue;
 }
 .spinnerGreen{
-    height: 50px;
-    width: 50px;
+    height: 20px;
+    width: 20px;
     background-color: red;
     border-radius: 25px;
     animation: colorFadeGreen 1s infinite;
@@ -28,8 +28,8 @@
     box-shadow: 0 5px 5px lightblue;
 }
 .spinnerOrange{
-    height: 50px;
-    width: 50px;
+    height: 20px;
+    width: 20px;
     background-color: red;
     border-radius: 25px;
     animation: colorFadeOrange 1s infinite;
