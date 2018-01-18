@@ -1,0 +1,16 @@
+<div class="card" style="width: 18rem; height:700px;">
+
+  <div style="text-align: center">
+    <div style="padding: 20px">
+      <img style="border-radius: 50%" width="50%" height="50%" src="http://www.standaarduitgeverij.be/wp-content/uploads/2017/01/Auteur-zonder-foto-1.png"
+        alt="Avatar">
+
+        <div style="padding-top: 20px;">
+          <div *ngFor="let player of players">
+            <listComponent [name]="player"></listComponent>
+          
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
