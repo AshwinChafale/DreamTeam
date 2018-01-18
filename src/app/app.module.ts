@@ -38,7 +38,9 @@ const appRoutes: Routes = [
     CarouselComponent,
     LoginComponent,
     PlayerComponent,
-    TeamComponent
+    TeamComponent,
+    VerticalLeftComponent,
+    ListComponent
 
   ],
   imports: [

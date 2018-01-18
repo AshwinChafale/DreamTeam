@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'team',
-    template: `
-        <h2>team goes here</h2>
-    `
+    templateUrl : 'team.component.html'
+    
 })
 export class TeamComponent implements OnInit {
 

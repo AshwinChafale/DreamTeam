@@ -9,6 +9,8 @@ import { ListComponent } from '../ListOfChoosenCricket/list.component';
 export class VerticalLeftComponent implements OnInit {
     public counterValue: number;
     public players : any ;
+
+    
     constructor() { 
         this.players = ['Sachin Tendulkar','Yuvraj Singh','Virat Kholi','MS Dhoni','Djdolls'];
     }
