@@ -18,6 +18,8 @@ import { ListComponent } from './ListOfChoosenCricket/list.component';
     HomeComponent,
     NavbarComponent,
     CarouselComponent,
+    VerticalLeftComponent,
+    ListComponent
     
   ],
   imports: [
