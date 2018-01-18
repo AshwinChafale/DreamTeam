@@ -9,6 +9,27 @@ import { VerticalLeftComponent } from './VerticalLeft/verticalLeft.component';
 import { ListComponent } from './ListOfChoosenCricket/list.component';
 import { PlayerComponent } from './player_components/player.component';
 
+import { RouterModule, Routes } from '@angular/router';
+import { TeamComponent } from './team/team.component';
+
+const appRoutes: Routes = [
+  { path: 'home',  
+    component: HomeComponent 
+  },
+  { 
+    path: 'team',      
+    component: TeamComponent
+  },
+  {
+    path: 'player',
+    component: PlayerComponent,
+    //data: { title: 'Heroes List' }
+  },
+  { path: '**', 
+    component: HomeComponent 
+  }
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,11 +37,16 @@ import { PlayerComponent } from './player_components/player.component';
     NavbarComponent,
     CarouselComponent,
     LoginComponent,
-    PlayerComponent
+    PlayerComponent,
+    TeamComponent
 
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

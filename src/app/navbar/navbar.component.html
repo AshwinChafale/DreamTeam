@@ -10,8 +10,11 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <div class="navbar-brand-centered">
       <ul class="navbar-nav mr-auto">
-        <li *ngFor='let menuitem of menuitems' class="nav-item">
-          <a class="nav-link" [href]='menuitem.link'>{{menuitem.name}}</a>
+        <li class="nav-item">
+            <a routerLink="home" routerLinkActive="active">Home</a>
+            <a routerLink="team">Team</a>
+            <a routerLink="player">Player</a>
+            
         </li>
       </ul>
     </div>
@@ -38,3 +41,5 @@
     </div>
   </div>
 </nav>
+
+<router-outlet></router-outlet>
