@@ -11,12 +11,23 @@
     <div class="navbar-brand-centered">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-            <a routerLink="home" routerLinkActive="active">Home</a>
-            <a routerLink="team">Team</a>
-            <a routerLink="player">Player</a>
+            <a class="nav-link" routerLink="home" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="team">Team</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="player">Player</a>
         </li>
       </ul>
     </div>
+    <!-- <div class="navbar-brand-centered">
+      <ul class="navbar-nav mr-auto">
+        <li *ngFor='let menuitem of menuitems' class="nav-item">
+          <a class="nav-link" [href]='menuitem.link'>{{menuitem.name}}</a>
+        </li>
+      </ul>
+    </div> -->
     <!-- <div class="navbar-brand-right">
           <ul class="navbar-nav justify-content-end">
             <li *ngFor='let buttonitem of buttonitems' class="nav-item">
