@@ -7,7 +7,7 @@ import { CarouselComponent } from './Carousel/carousel.component';
 import { LoginComponent } from './login/login.component';
 import { VerticalLeftComponent } from './VerticalLeft/verticalLeft.component';
 import { ListComponent } from './ListOfChoosenCricket/list.component';
-import { PlayerComponent } from './player_components/player.component';
+import { PlayerComponent } from './player/player.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { TeamComponent } from './team/team.component';
