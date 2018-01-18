@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
 import { NavbarComponent } from './navbar/navbar.component';
+import { CarouselComponent } from './Carousel/carousel.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -13,7 +15,7 @@ import { NavbarComponent } from './navbar/navbar.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,CarouselComponent, LoginComponent
   ],
   imports: [
     BrowserModule
