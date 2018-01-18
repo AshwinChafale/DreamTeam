@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
 import { NavbarComponent } from './navbar/navbar.component';
+import { CarouselComponent } from './Carousel/carousel.component';
+import { VerticalLeftComponent } from './VerticalLeft/verticalLeft.component';
+import { ListComponent } from './ListOfChoosenCricket/list.component';
 
 
 
@@ -13,7 +16,9 @@ import { NavbarComponent } from './navbar/navbar.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    CarouselComponent,
+    
   ],
   imports: [
     BrowserModule
