@@ -7,6 +7,7 @@ import { CarouselComponent } from './Carousel/carousel.component';
 import { LoginComponent } from './login/login.component';
 import { VerticalLeftComponent } from './VerticalLeft/verticalLeft.component';
 import { ListComponent } from './ListOfChoosenCricket/list.component';
+import { PlayerComponent } from './player_components/player.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ListComponent } from './ListOfChoosenCricket/list.component';
     HomeComponent,
     NavbarComponent,
     CarouselComponent,
-    LoginComponent
+    LoginComponent,
+    PlayerComponent
 
   ],
   imports: [
