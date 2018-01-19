@@ -1,0 +1,15 @@
+.animateAdd {
+    display: none;
+}
+
+div:hover .animateAdd {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    padding: 0px 1em;
+    color: red;
+}
+
+div:hover .animate {
+    text-align: left;
+}
