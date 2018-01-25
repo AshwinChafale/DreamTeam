@@ -1,16 +1,14 @@
-<div class="card" style="width: 18rem; height:700px;">
-
+<div class="card" style="width: 100%; height:700px; margin-top:10px;">
   <div style="text-align: center">
     <div style="padding: 20px">
       <img style="border-radius: 50%" width="50%" height="50%" src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAhdAAAAJDllODM1NWQ1LWExZWQtNDFiOC1hNTBlLWFlNTljMGMxYmViZg.jpg"
         alt="Avatar">
-        <div style="padding-top:6px; font-size: 15px; font-weight: 500">John Doe (Captain)</div>
-        <div style="padding-top: 20px;">
-          <div *ngFor="let player of players">
-            <listComponent [name]="player"></listComponent>
-          
-          </div>
+      <div style="padding-top:6px; font-size: 15px; font-weight: 500">John Doe (Captain)</div>
+      <div style="padding-top: 20px;">
+        <div *ngFor="let player of players">
+          <listComponent [name]="player"></listComponent>
         </div>
+      </div>
     </div>
   </div>
 </div>

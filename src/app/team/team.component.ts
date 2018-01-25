@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
     selector: 'team',
-    templateUrl : 'team.component.html'
+    templateUrl : 'team.component.html',
+    styleUrls: ['./team.component.css']
     
 })
 export class TeamComponent implements OnInit {

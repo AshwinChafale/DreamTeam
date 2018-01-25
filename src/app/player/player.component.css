@@ -3,9 +3,16 @@
     width: 25em;
 } */
 
-.card-title{
+.card-title {
     margin-right: 0.1rem;
 }
-.cardtopmargin{
- margin-top: 10px;
+
+.cardtopmargin {
+    margin-top: 10px;
+}
+
+.floatbtntr {
+    position: absolute;
+    top: 5px;
+    right: 5px; 
 }
