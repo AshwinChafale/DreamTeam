@@ -2,6 +2,6 @@
     background-color: #00ccff !important;
 }
 
-.carousel-indicators .active {
-    background-color: grey;
+.carousel-indicators li.active{
+    background-color: grey !important;
 }

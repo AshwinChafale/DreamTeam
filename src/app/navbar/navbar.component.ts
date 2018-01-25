@@ -13,8 +13,8 @@ export class NavbarComponent implements OnInit {
     "name": "Team",
     "link": "/team"
   }, {
-    "name": "Player",
-    "link": "/player"
+    "name": "Players",
+    "link": "/players"
   }];
   // buttonitems: any[] = [{
   //   "name": "LOG IN",

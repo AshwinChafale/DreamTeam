@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
     selector: 'player',
@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class PlayerComponent implements OnInit {
 
     source:any ;
+
+    @Input()
+    name: number;
+
     constructor() { 
         this.source="https://img.etimg.com/thumb/msid-61166425,width-672,resizemode-4,imgsize-126503/news/sports/why-after-13-years-mahendra-singh-dhoni-is-still-not-out.jpg";
     }

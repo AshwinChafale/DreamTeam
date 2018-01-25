@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamComponent implements OnInit {
 
-    constructor() { }
+    public players : any ;
+    constructor() { 
+        this.players = ['Akash','Aditya','Ajay','Aman','Sisodiya'];
+    }
 
     ngOnInit() { 
 

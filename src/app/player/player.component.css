@@ -1,4 +1,11 @@
-.cricketerCard {
+/* .cricketerCard {
     border-radius: 60px 5px 5px 60px;
     width: 25em;
+} */
+
+.card-title{
+    margin-right: 0.1rem;
+}
+.cardtopmargin{
+ margin-top: 10px;
 }
