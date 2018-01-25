@@ -11,6 +11,7 @@ import { PlayerComponent } from './player/player.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { TeamComponent } from './team/team.component';
+import { HttpClientModule } from '@angular/common/http';  
 
 const appRoutes: Routes = [
   { path: 'home',  
@@ -45,6 +46,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
