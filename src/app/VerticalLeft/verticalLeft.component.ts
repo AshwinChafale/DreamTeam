@@ -12,7 +12,7 @@ export class VerticalLeftComponent implements OnInit {
 
     
     constructor() { 
-        this.players = ['Sachin Tendulkar','Yuvraj Singh','Virat Kholi','MS Dhoni','Djdolls'];
+        this.players = ['Sachin Tendulkar','Yuvraj Singh','Virat Kholi','MS Dhoni','Yuvraj Singh','Virat Kholi','MS Dhoni','Yuvraj Singh','Virat Kholi','MS Dhoni','Djdolls'];
     }
 
     ngOnInit() { 
