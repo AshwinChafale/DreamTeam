@@ -9,7 +9,7 @@ import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 export class AppComponent implements OnInit {
   title = 'app';
   constructor(){
-    localStorage.setItem('address','http://10.222.70.233:9999');
+    localStorage.setItem('address','http://localhost:9999');
   }
   ngOnInit(){
   }

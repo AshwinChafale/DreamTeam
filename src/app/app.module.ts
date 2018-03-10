@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -11,14 +13,24 @@ import { PlayerComponent } from './player/player.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { TeamComponent } from './team/team.component';
-import { HttpClientModule } from '@angular/common/http';  
+import { HttpClientModule } from '@angular/common/http';
+import { AutocompleteFilterExample } from './Autocomplete/autocomplete.component';
+
+import {
+  MatFormFieldModule,
+  MatInputModule,
+
+} from '@angular/material';
+
+
 
 const appRoutes: Routes = [
-  { path: 'home',  
-    component: HomeComponent 
+  {
+    path: 'home',
+    component: HomeComponent
   },
-  { 
-    path: 'team',      
+  {
+    path: 'team',
     component: TeamComponent
   },
   {
@@ -26,8 +38,9 @@ const appRoutes: Routes = [
     component: PlayerComponent,
     //data: { title: 'Heroes List' }
   },
-  { path: '**', 
-    component: HomeComponent 
+  {
+    path: '**',
+    component: HomeComponent
   }
 ];
 
@@ -41,12 +54,20 @@ const appRoutes: Routes = [
     PlayerComponent,
     TeamComponent,
     VerticalLeftComponent,
-    ListComponent
+    ListComponent,
+    AutocompleteFilterExample
+
+
 
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only

@@ -1,0 +1,12 @@
+<div>
+   <!-- <input type="text"  /> -->
+   <input style="width: 40rem;" type="email" (keyup)="autocomplete($event)" class="form-control" placeholder="Search Player here">
+  
+</div>
+<div>
+    <div *ngFor="let player of cricketer; let i = index;">
+        <div class="form-control" class="card" style="width: 40rem;padding: 15px;">
+            {{player}}
+          </div>
+    </div>
+</div>
