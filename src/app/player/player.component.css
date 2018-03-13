@@ -13,15 +13,23 @@
 
 .floatbtntr {
     position: absolute;
-    top: 0;
-    bottom: 0;
+    height: 20px;
+    width: 20px;
+    bottom: 35px;
     margin: auto;
-    right: 0px;
-    border-radius: 0 .25rem .25rem 0;
-    background-color: deepskyblue;
-    border-color: deepskyblue;
+    right: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0);
+    border: 0px;
+}
+i{
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .floatbtntr:hover{
-    background-color: rgb(0, 110, 255);
+    color: deepskyblue;
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0);
 }

@@ -13,3 +13,7 @@ div:hover .animateAdd {
 div:hover .animate {
     text-align: left;
 }
+
+div:hover span.costy{
+    display: none;
+}

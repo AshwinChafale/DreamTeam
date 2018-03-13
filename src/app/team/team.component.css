@@ -20,3 +20,15 @@
     color: deepskyblue;
     border-radius: 10px;
 }
+.search{
+    padding: 10px;
+    padding-top: 20px;
+}
+.searchbar{
+    margin: auto;
+}
+.mag{
+    position: absolute;
+    top: 26px;
+    right: 40px;
+}
