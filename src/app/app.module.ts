@@ -23,6 +23,8 @@ import {
   MatInputModule,
 
 } from '@angular/material';
+import { AnalysisComponent } from './analysis/analysis.component';
+import { FilterPipe } from './team/filter.pipe';
 
 
 
@@ -42,6 +44,10 @@ const appRoutes: Routes = [
     //data: { title: 'Heroes List' }
   },
   {
+    path: 'analysis',
+    component: AnalysisComponent,
+  },
+  {
     path: '**',
     component: HomeComponent
   }
@@ -59,7 +65,9 @@ const appRoutes: Routes = [
     VerticalLeftComponent,
     ListComponent,
     AutocompleteFilterExample,
-    ChartComponent
+    ChartComponent,
+    AnalysisComponent,
+    FilterPipe
 
 
 

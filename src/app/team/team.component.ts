@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Player } from './Player';
 import { TeamService } from './team.service';
+import {Router} from '@angular/router'
 
 @Component({
     selector: 'team',
@@ -22,8 +23,10 @@ export class TeamComponent implements OnInit {
     selectedP = [];
     perdict: number = 0;
     bowler : any;
+    maxBatsman : number=0;
+    maxBowler : number=0;
     teamService: TeamService; maxiumParamterSelectedAs: any = 8500.568;
-    constructor(private httpClient: HttpClient, teamService: TeamService) {
+    constructor(private httpClient: HttpClient, teamService: TeamService,private router: Router) {
         // this.players = ['Akash','Aditya','Ajay','Aman','Sisodiya'];
         this.address = localStorage.getItem('address');
         this.teamService = teamService;
@@ -49,9 +52,10 @@ export class TeamComponent implements OnInit {
         //      'balls_faced' : player.balls_faced,
         //      'sum' : player.sum
         //  });
-
+        
         if (this.selectedP.length == 0) {
             this.totalValue = this.totalValue + player.cost;
+            this.maxBatsman = this.maxBatsman + 1;
             console.log(this.totalValue);
             this.selectedP.push(player);
             console.log(this.selectedP);
@@ -72,9 +76,15 @@ export class TeamComponent implements OnInit {
                     this.totalValue = this.totalValue - player.cost;
                 }
                 else {
-
+                    if(this.maxBatsman<6){
+                     
+                        this.maxBatsman = this.maxBatsman + 1;
                     console.log(this.totalValue);
                     this.selectedP.push(player);
+                    }
+                    else{
+                        alert("Cannot add more than 6");
+                    }
                 }
             }
         }
@@ -82,7 +92,7 @@ export class TeamComponent implements OnInit {
 
         this.teamService.setUser(this.selectedP);
 
-
+        console.log(this.maxBatsman );
 
 
 
@@ -94,12 +104,15 @@ export class TeamComponent implements OnInit {
         //      'balls_faced' : player.balls_faced,
         //      'sum' : player.sum
         //  });
-
+      
         if (this.selectedP.length == 0) {
+            this.maxBowler = this.maxBowler + 1;
+            
            this.totalValue = this.totalValue + player.cost;
             console.log(this.totalValue);
             this.selectedP.push(player);
             console.log(this.selectedP);
+         
         }
         console.log(this.selectedP.includes(player));
         if (this.selectedP.includes(player)) {
@@ -117,9 +130,18 @@ export class TeamComponent implements OnInit {
                     this.totalValue = this.totalValue - player.cost;
                 }
                 else {
-
-                    console.log(this.totalValue);
+                    if(this.maxBowler<6){
+                        
+                        this.maxBowler = this.maxBowler + 1;
+                      //  alert(this.maxBowler);
+                    console.log("bowler"+this.maxBowler);
                     this.selectedP.push(player);
+                    console.log(this.maxBowler);
+                    }
+                    else{
+                        alert('Cannot add more than 6 bowler');
+                       
+                    }
                 }
             }
         }
@@ -127,12 +149,22 @@ export class TeamComponent implements OnInit {
 
         this.teamService.setUser(this.selectedP);
 
-
+       
 
 
 
     }
     delete(player) {
+       
+        if(player.oldparm){
+           this.maxBowler = this.maxBowler - 1;
+        }
+        else{
+            this.maxBatsman = this.maxBatsman -1;
+        }
+
+        console.log(this.maxBatsman + "  " + this.maxBowler);
+       
         this.totalValue = this.totalValue - player.cost;
         console.log(this.totalValue);
         var a = this.selectedP.indexOf(player);
@@ -158,6 +190,10 @@ export class TeamComponent implements OnInit {
             var ans = this.fscore.toFixed(2);
             console.log(ans + "lol");
             this.fscore = Number.parseFloat(ans);
+            localStorage.setItem("lastname",JSON.stringify(this.selectedP));
+            localStorage.setItem("winscore",this.fscore.toString());
+            this.router.navigate(['./analysis']);
+            
         }
     }
     autocomplete(event) {

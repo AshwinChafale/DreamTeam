@@ -9,57 +9,12 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 })
 export class ChartComponent {
-  single: any[]  = [
-    {
-      "name": "Sachin",
-      "value": 20
-    },
-    {
-      "name": "Rohit",
-      "value": 40
-    },
-    {
-      "name": "Manoj",
-      "value": 40
-    },
-    {
-      "name": "Pandya",
-      "value": 20
-    },
-    {
-      "name": "Suresh",
-      "value": 40
-    },
-    {
-      "name": "Rahul",
-      "value": 40
-    },
-    {
-      "name": "Pandya",
-      "value": 20
-    },
-    {
-      "name": "Suresh",
-      "value": 40
-    },
-    {
-      "name": "Rahul",
-      "value": 40
-    },
-    {
-      "name": "Suresh",
-      "value": 40
-    },
-    {
-      "name": "Rahul",
-      "value": 40
-    }
-  ];
-  ;
-  multi: any[];
+
+  single: any[]  = [];
+  multi: any = JSON.parse(localStorage.getItem("analysis"));
 
   view: any[] = [600, 600];
-
+  something : String
   // options
   showXAxis = true;
   showYAxis = true;
@@ -78,7 +33,57 @@ export class ChartComponent {
   autoScale = true;
   
   constructor() {
-    Object.assign(this.single)   
+    console.log("sdsdsdsds");
+    var array = JSON.stringify(this.multi);
+    console.log(this.multi[1].name);
+    console.log(this.multi);
+    this.single = [
+      {
+        "name": this.multi[0].name,
+        "value": this.multi[0].value
+      },
+      {
+        "name": this.multi[1].name,
+        "value": this.multi[1].value
+      },
+      {
+        "name": this.multi[2].name,
+        "value": this.multi[2].value
+      },
+      {
+        "name": this.multi[3].name,
+        "value": this.multi[3].value
+      },
+      {
+        "name": this.multi[4].name,
+        "value": this.multi[4].value
+      },
+      {
+        "name": this.multi[5].name,
+        "value": this.multi[5].value
+      },
+      {
+        "name": this.multi[6].name,
+        "value": this.multi[6].value
+      },
+      {
+        "name": this.multi[7].name,
+        "value": this.multi[7].value
+      },
+      {
+        "name": this.multi[8].name,
+        "value": this.multi[8].value
+      },
+      {
+        "name": this.multi[9].name,
+        "value": this.multi[9].value
+      },
+      {
+        "name": this.multi[10].name,
+        "value": this.multi[10].value
+      }
+    ];
+    Object.assign(this.single);   
   }
   
   onSelect(event) {
