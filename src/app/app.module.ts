@@ -15,12 +15,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { TeamComponent } from './team/team.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AutocompleteFilterExample } from './Autocomplete/autocomplete.component';
+import { ChartComponent } from './Chart/chart.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import {
   MatFormFieldModule,
   MatInputModule,
 
 } from '@angular/material';
+
 
 
 
@@ -55,7 +58,9 @@ const appRoutes: Routes = [
     TeamComponent,
     VerticalLeftComponent,
     ListComponent,
-    AutocompleteFilterExample
+    AutocompleteFilterExample,
+    ChartComponent
+
 
 
 
@@ -67,7 +72,7 @@ const appRoutes: Routes = [
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
-
+    NgxChartsModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only

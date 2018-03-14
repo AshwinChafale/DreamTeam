@@ -39,6 +39,7 @@ export class TeamComponent implements OnInit {
     }
 
     showMore() {
+        console.log("clicked");
         this.rightIndex = this.rightIndex + 12;
     }
     select(player): void {
@@ -166,6 +167,15 @@ export class TeamComponent implements OnInit {
         });
         console.log(result);
         this.players = result
+
+    }
+    autocompleteforbowler(event) {
+        console.log(event.target.value)
+        var result = this.bowler.filter(function (value) {
+            return (value.batsman.toLowerCase().includes(event.target.value.toLowerCase()))
+        });
+        console.log(result);
+        this.bowler = result
 
     }
     ngOnInit() {

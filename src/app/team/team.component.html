@@ -1,10 +1,11 @@
 <div class="container">
     <div class="row">
         <div class="col-md-9">
-                <div class="search">
+                <div style="padding-right: 0px;" class="search">
                         <!-- <input type="text"  /> -->
-                        <span class="mag"><i class="fa fa-search" style="font-size: 20px;"></i></span>
-                        <input type="email" (keyup)="autocomplete($event)" class="form-control searchbar" placeholder="Search Player here"/>
+                        <div style="font-size: 14px;padding-left: 10px;padding-bottom: 20px">Choose min 4 max 6 Batsman </div>
+                        <span style="width:8px;height:8px;padding-top:40px" class="mag"><i class="fa fa-search" style="font-size: 20px;"></i></span>
+                        <input style="border-radius: 20px;" type="email" (keyup)="autocomplete($event)" class="form-control searchbar" placeholder="Search Player here"/>
                        
                      </div>
             <div class="row">
@@ -12,9 +13,17 @@
                     <player  [batsman]="player.batsman" [runsMade]="player.sum" [ballFaced]="player.balls_faced" [index]="player.cost" (click)="select(player)"></player>
                 </div>
             </div>
-            <div>
-                <button type="button" class="btn nav-link btn-primary moreBtn" style="border-radius:30px;padding:.375rem 2.75rem;" (click)="showMore()">Show More</button>
+            <div style="bottom:70px;position:fixed;right:10px">
+                <button (click)="showMore()" type="button"  class="btn nav-link  moreBtn" style="border-radius:30px;padding:.375rem 2.75rem;background-color: #1E88E5;color: aliceblue" >More</button>
             </div>
+            <hr style=""/>
+            <div style="padding-right: 0px;" class="search">
+                <!-- <input type="text"  /> -->
+                <div style="padding-left: 10px;padding-bottom: 20px;font-size: 14px;">Choose min 4 max 6 Bowler </div>
+                <!-- <span style="width:8px;height:8px;" class="mag"><i class="fa fa-search" style="font-size: 20px;"></i></span> -->
+                <input style="border-radius: 20px" type="email" (keyup)="autocompleteforbowler($event)" class="form-control searchbar" placeholder="Search Player here"/>
+               
+             </div>
             <div class="row">
                     <div class="col-sm-3" *ngFor="let player of bowler |slice:0:this.rightIndex; let i = index ">
                         <player  [batsman]="player.batsman" [runsMade]="player.sum" [ballFaced]="player.balls_faced" [index]="player.cost" (click)="selectBowler(player)"></player>
@@ -26,13 +35,17 @@
             <div class="card" style="width: 100%; margin-top:10px;position:sticky;top:10px;">
                 <div style="text-align: center">
                   <div style="padding: 20px">
-                    <div style="padding-top:6px; font-size: 1rem; font-weight: 500">Wallet Balance <br/> <b> &#8377; {{50 - this.totalValue}} Cr </b></div>
+                    <div style="padding-top:6px; font-size: 1rem; font-weight: 500"><img style="width:30px;height:30px" src="assets/images/639365.svg"/> Balance <br/> <b> &#8377; {{50 - this.totalValue}} Cr </b></div>
                     <div style="padding-top:6px; font-size: 1rem; font-weight: 500">Total Player {{selectedP.length}}</div>
                     <div style="padding-top: 20px;">
                       <div *ngFor="let player of selectedP">
                         <listComponent [name]="player.batsman" [cost]="player.cost" (click)="delete(player)"></listComponent>
                       </div>
-                      <button (click)="calculate()">Predict</button>
+                      <!-- <button (click)="calculate()">Predict</button> -->
+                      <!-- <button  (click)="calculate()" type="button" style="padding-left:15px;padding-right:15px;border-radius: 15px;font-size:13px; " class="btn btn-primary btn-sm">Predict</button> -->
+                      <div style="bottom:10px;position:fixed;right:10px">
+                        <button  (click)="calculate()"  type="button"  class="btn nav-link  moreBtn" style="border-radius:30px;padding:.375rem 2.75rem;background-color: #1E88E5;color: aliceblue" >Predict</button>
+                    </div>
                     </div>
                   </div>
                 </div>
